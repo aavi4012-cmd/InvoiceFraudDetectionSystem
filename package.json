@@ -1,0 +1,13 @@
+{
+  "name": "invoice-fraud-watch",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "demo": "node scripts/generate_demo_data.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "form-data": "^4.0.0",
+    "pdfkit": "^0.15.0"
+  }
+}

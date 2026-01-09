@@ -1,0 +1,170 @@
+.upload-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 5%;
+}
+
+/* --- HEADER --- */
+.upload-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+
+.upload-header h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.upload-header p {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.btn-secondary-outline {
+  padding: 12px 24px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 600;
+  background: white;
+  transition: all 0.2s;
+}
+
+.btn-secondary-outline:hover {
+  background: var(--bg);
+  border-color: var(--azure-blue);
+}
+
+/* --- UPLOADER BOX --- */
+.uploader-wrapper {
+  margin-bottom: 60px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+/* --- ANALYSIS GRID --- */
+.analysis-section {
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+.analysis-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.analysis-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.count-badge {
+  background: var(--azure-light);
+  color: var(--azure-blue);
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+/* --- ANALYSIS CARD --- */
+.analysis-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.file-info {
+  display: flex;
+  gap: 12px;
+}
+
+.file-icon {
+  font-size: 1.5rem;
+  background: #f8f9fa;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.analysis-title {
+  font-weight: 700;
+  color: var(--text-main);
+  font-size: 1rem;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vendor-name {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.card-body {
+  flex: 1;
+  background: #fcfcfc;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.risk-reasons {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+.card-footer {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 15px;
+}
+
+.details-link {
+  text-decoration: none;
+  color: var(--azure-blue);
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.details-link span {
+  transition: transform 0.2s;
+}
+
+.details-link:hover span {
+  transform: translateX(5px);
+}

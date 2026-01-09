@@ -1,0 +1,551 @@
+/* --- MODERN ROOT & RESET --- */
+:root {
+  /* Injecting Light Theme defaults to ensure visibility immediately */
+  --azure-blue: #0078d4;
+  --azure-dark: #005a9e;
+  --azure-light: #eff6fc;
+  --bg: #f8f9fa;
+  --surface: #ffffff;
+  --text-main: #1a1a1a;
+  --muted: #595959;
+  --border: #e1e4e8;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
+  --glass: rgba(255, 255, 255, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.landing-container {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* --- HERO SECTION: Clean & Airy --- */
+.hero-section {
+  padding: 160px 10% 100px;
+  text-align: center;
+  background: 
+    radial-gradient(circle at top right, rgba(0, 120, 212, 0.12), transparent 40%),
+    radial-gradient(circle at bottom left, rgba(16, 124, 16, 0.05), transparent 40%);
+  background-color: var(--surface);
+}
+
+.azure-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--azure-light);
+  color: var(--azure-blue);
+  padding: 10px 24px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 32px;
+  border: 1px solid rgba(0, 120, 212, 0.15);
+  box-shadow: var(--shadow-sm);
+}
+
+.hero-section h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.8rem, 7vw, 4.8rem);
+  font-weight: 800;
+  color: #000000; /* Deep black for maximum visibility */
+  line-height: 1.1;
+  max-width: 1000px;
+  margin: 0 auto 28px;
+  letter-spacing: -0.04em;
+}
+
+.hero-section p {
+  font-size: 1.35rem;
+  color: var(--muted);
+  max-width: 700px;
+  margin: 0 auto 48px;
+  font-weight: 400;
+}
+
+/* --- BUTTONS: Modern & High Contrast --- */
+.header-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.primary, .secondary {
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.primary {
+  background: var(--azure-blue);
+  color: #ffffff !important; /* Force visibility */
+  box-shadow: 0 4px 14px rgba(0, 120, 212, 0.3);
+}
+
+.primary:hover {
+  background: var(--azure-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 120, 212, 0.4);
+}
+
+.secondary {
+  background: var(--surface);
+  color: var(--azure-blue) !important;
+  border: 2px solid var(--azure-blue);
+}
+
+.secondary:hover {
+  background: var(--azure-light);
+  transform: translateY(-2px);
+}
+
+/* --- STATS BAR: The "Impact" Zone --- */
+.stats-bar {
+  background: #111111; /* Solid dark background */
+  color: #ffffff;
+  padding: 80px 10%;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat-item h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--azure-blue); /* Azure blue pops on dark */
+  margin-bottom: 8px;
+}
+
+.stat-item p {
+  color: #a19f9d;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- TECH STACK STYLES --- */
+.tech-stack {
+  padding: 120px 10%;
+  background-color: #fcfcfc; /* Very light grey background to make white cards pop */
+}
+
+.section-header-centered {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.section-header-centered h2 {
+  font-size: 2.8rem;
+  color: #111;
+  margin: 20px 0;
+  font-weight: 800;
+}
+
+.section-header-centered p {
+  color: #666;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- THE GRID --- */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tech-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid #eef0f2;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tech-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  border-color: var(--azure-blue);
+}
+
+/* ICON STYLES */
+.tech-icon-wrapper {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  background: #f0f7ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+}
+
+/* TEXT VISIBILITY FIX */
+.tech-info h4 {
+  color: var(--azure-blue);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.tech-info h3 {
+  color: #1a1a1a; /* Deep visible black */
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.tech-info p {
+  color: #555; /* Visible grey */
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* --- STEP NUMBERS --- */
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: var(--azure-blue);
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+/* --- IMPACT SECTION --- */
+.impact-card {
+  padding: 50px;
+  border-radius: 20px;
+  background: var(--azure-blue) !important;
+}
+
+.impact-card h3, .impact-card p {
+  color: #ffffff !important;
+}
+
+
+
+
+
+/* --- RESPONSIVE FIXES --- */
+@media (max-width: 768px) {
+  .hero-section h1 { font-size: 2.5rem; }
+  .header-actions { flex-direction: column; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+}
+
+
+/* --- TRUSTED BY LOGO CLOUD --- */
+.trusted-by {
+  padding: 60px 0;
+  background: #ffffff;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: center;
+}
+
+.label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #888;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.logo-cloud {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  opacity: 0.6;
+}
+
+.logo-cloud span {
+  font-size: 0.9rem;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.divider-v {
+  width: 1px;
+  height: 20px;
+  background: #ddd;
+}
+
+
+/* --- IMPACT SECTION --- */
+.impact-section {
+  padding: 100px 10%;
+  background: #fcfcfc;
+}
+
+.section-header-mini {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.badge-outline {
+  border: 1px solid var(--azure-blue);
+  color: var(--azure-blue);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.impact-card-main {
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 24px;
+  border: 1px solid #eee;
+  display: flex;
+  gap: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.impact-icon { font-size: 3rem; }
+.tag { color: var(--azure-blue); font-weight: 800; font-size: 0.8rem; }
+
+.impact-secondary-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.impact-card-sub {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.impact-icon-small { font-size: 1.5rem; background: #f0f7ff; padding: 10px; border-radius: 12px; }
+
+/* --- FINAL CTA --- */
+.final-cta-container {
+  padding: 80px 10%;
+}
+
+.final-cta-box {
+  background: linear-gradient(135deg, #0078d4 0%, #003a66 100%);
+  padding: 80px 40px;
+  border-radius: 32px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn-white {
+  background: white;
+  color: #0078d4 !important;
+  padding: 16px 40px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 30px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* --- FOOTER --- */
+.footer-professional {
+  background: #ffffff;
+  padding: 80px 10% 40px;
+  border-top: 1px solid #eee;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.footer-logo { font-weight: 800; font-size: 1.2rem; margin-bottom: 20px; }
+.footer-logo span { color: var(--azure-blue); }
+
+.footer-col h5 { margin-bottom: 20px; font-size: 0.9rem; color: #999; text-transform: uppercase; }
+.footer-col a { display: block; margin-bottom: 12px; color: #444; text-decoration: none; font-size: 0.95rem; }
+
+.footer-bottom {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.dot { width: 4px; height: 4px; background: #ccc; border-radius: 50%; margin: 0 15px; display: inline-block; vertical-align: middle; }
+
+
+
+/* --- WORKFLOW --- */
+.workflow-section { padding: 100px 10%; background: #fff; }
+.workflow-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; position: relative; }
+
+.workflow-card {
+  background: #f8f9fa;
+  padding: 40px;
+  border-radius: 24px;
+  position: relative;
+  border: 1px solid #eee;
+  z-index: 1;
+}
+
+.workflow-number {
+  background: var(--azure-blue);
+  color: white;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+/* The Connecting Line */
+.workflow-connector {
+  position: absolute;
+  top: 60px;
+  right: -40px;
+  width: 40px;
+  height: 2px;
+  border-top: 2px dashed #ddd;
+  z-index: -1;
+}
+
+/* --- IMPACT SECTION --- */
+.impact-section { padding: 80px 10%; background: #fcfcfc; }
+.impact-container { display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px; }
+
+.impact-main-card {
+  background: var(--azure-blue);
+  color: white;
+  padding: 60px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.impact-main-card h3 { color: white; font-size: 2.5rem; margin-bottom: 20px; }
+.tag-premium { background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 5px; font-size: 0.8rem; width: fit-content; margin-bottom: 20px; }
+
+.impact-side-grid { display: flex; flex-direction: column; gap: 20px; }
+.impact-sub-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.icon-circle { font-size: 1.5rem; margin-bottom: 15px; }
+
+/* --- FINAL CTA --- */
+.cta-wrapper { padding: 80px 10%; }
+.cta-glass-box {
+  background: linear-gradient(135deg, #0078d4 0%, #002d50 100%);
+  padding: 100px 40px;
+  border-radius: 40px;
+  text-align: center;
+  color: white;
+}
+.cta-glass-box h2 { color: white; font-size: 3rem; margin-bottom: 20px; }
+.cta-btn-primary {
+  background: white;
+  color: #0078d4 !important;
+  padding: 18px 45px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+/* --- GLOBAL FOOTER (Renamed) --- */
+.footer-site-global {
+  background: #ffffff;
+  padding: 100px 10% 40px;
+  border-top: 1px solid #eee;
+  color: #1a1a1a;
+}
+
+.footer-main-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 100px;
+  margin-bottom: 80px;
+}
+
+.footer-logo-text { font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; }
+.footer-logo-text span { color: var(--azure-blue); }
+
+.footer-nav-group { display: flex; gap: 80px; }
+.footer-nav-col h5 { font-size: 0.8rem; color: #999; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px; }
+.footer-nav-col a, .footer-info-text { display: block; margin-bottom: 15px; color: #555; text-decoration: none; font-size: 0.95rem; }
+.footer-nav-col a:hover { color: var(--azure-blue); }
+
+.footer-legal-bar {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.separator { margin: 0 15px; color: #ddd; }
+
+/* Mobile Fix */
+@media (max-width: 992px) {
+  .workflow-grid, .impact-container, .footer-main-content { grid-template-columns: 1fr; gap: 40px; }
+  .workflow-connector { display: none; }
+}

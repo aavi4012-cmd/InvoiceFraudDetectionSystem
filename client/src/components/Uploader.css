@@ -1,0 +1,156 @@
+/* --- UPLOADER CONTAINER --- */
+.uploader-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.dropzone {
+  border: 2px dashed var(--border);
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 50px 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropzone.dragging {
+  border-color: var(--azure-blue);
+  background: var(--azure-light);
+  transform: scale(1.02);
+}
+
+.upload-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.dropzone h3 { margin: 0 0 8px; color: var(--text-main); }
+.dropzone p { color: var(--muted); margin: 0; }
+
+/* --- FILE LIST --- */
+.file-list-section {
+  margin-top: 25px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 20px;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.file-grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.file-info { display: flex; align-items: center; gap: 15px; }
+
+.file-ext {
+  background: var(--azure-blue);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.file-name { font-weight: 600; font-size: 0.9rem; margin: 0; }
+.file-size { font-size: 0.75rem; color: var(--muted); margin: 0; }
+
+.remove-btn {
+  background: transparent;
+  border: none;
+  color: #ff4d4d;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+/* --- ACTION BUTTON --- */
+.analyze-btn {
+  width: 100%;
+  margin-top: 30px;
+  padding: 18px;
+  background: var(--azure-blue);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.analyze-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* --- RISK PILLS --- */
+.risk-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 99px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.risk-high { background: #fee2e2; color: #a4262c; border: 1px solid #fecaca; }
+.risk-medium { background: #fff7ed; color: #d83b01; border: 1px solid #ffedd5; }
+.risk-low { background: #f0fdf4; color: #107c10; border: 1px solid #dcfce7; }
+
+/* --- ALERTS --- */
+.error-banner {
+  margin-top: 20px;
+  padding: 12px;
+  background: #fff1f2;
+  color: #e11d48;
+  border-radius: 8px;
+  border-left: 4px solid #e11d48;
+  font-size: 0.9rem;
+}
+
+/* --- LOADER ANIMATION --- */
+.dot-pulse {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0.3; transform: scale(0.8); }
+}
